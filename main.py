@@ -2,6 +2,7 @@ from sumar import sumar
 from resta import resta
 from multiplicacion import multiplicacion
 from dividir import dividir
+from suma_avanzada import suma_avanzada
 
 def show_menu():
     print("*"*32)
@@ -39,8 +40,9 @@ def main():
             print(f"{a} / {b} = {dividir(a,b)}")
 
         elif opcion == "5":
-            numeros = input("Ingrese los números separados por espacios: ").split()
-            print(f"{numeros}")
+            lista_strings = input("Ingrese los números separados por espacios: ").split()
+            numeros = list(map(float, lista_strings))
+            print(f"la suma de {numeros} = {suma_avanzada(numeros)}")
 
         elif opcion == "6":
             print("Saliendo...")
