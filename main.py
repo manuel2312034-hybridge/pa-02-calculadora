@@ -1,3 +1,5 @@
+from sumar import sumar
+
 def show_menu():
     print("1. Sumar 2 números")
     print("2. Restar 2 números")
@@ -14,7 +16,7 @@ def main():
         if opcion == "1":
             a = float(input("Ingrese el primer número: "))
             b = float(input("Ingrese el segundo número: "))
-            print(f"{a} {b}")
+            print(f"{a} + {b} = {sumar(a,b)}")
 
         elif opcion == "2":
             a = float(input("Ingrese el primer número: "))
